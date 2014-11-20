@@ -18,11 +18,17 @@ public class MySQLdb {
 			
 		myConn = DriverManager.getConnection(url, user, password);
 		
+		if (myConn != null) {
+			
+		System.out.println("Verbonden");
+		
+		}
+		
 		myStmt = myConn.createStatement();
 		
 		String sql = "insert into onzin "
 				   + " (jaonzin, hoi)"
-				   + " values ('abed', 'Abed')";
+				   + " values ('firat', 'demircietje')";
 		
 		myStmt.executeUpdate(sql);
 		
@@ -43,5 +49,4 @@ public class MySQLdb {
 		}
 		
 		}
-
 }
