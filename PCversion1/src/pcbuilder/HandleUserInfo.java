@@ -20,7 +20,6 @@ public class HandleUserInfo extends HttpServlet {
 	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
 	      
-		  
 		  String[] mb = request.getParameterValues("PcBuilder");
 		  res.setContentType("text/html");
 	      PrintWriter out = res.getWriter();
@@ -31,15 +30,16 @@ public class HandleUserInfo extends HttpServlet {
 	      "transitional//en\">\n";
 	      for(String s : mb)
 	      {
-	      out.println(docType +
-	                "<html>\n" +
-	                "<head><title>" + title + "</title></head>\n" +
-	                "<body bgcolor=\"#f0f0f0\">\n");
-	      out.println("<li>" + s + "<li>");
+	    	  
+		      out.println(docType +
+		                "<html>\n" +
+		                "<head><title>" + title + "</title></head>\n" +
+		                "<body bgcolor=\"#f0f0f0\">\n");
+		      out.println("<li>" + s + "<li>");
+	      
 	      }
 	       out.println("<h1 align=\"center\">" + title + "</h1>\n" +
 	       "</body></html>");
-	
     }
 	
 
@@ -49,7 +49,7 @@ public class HandleUserInfo extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException 
 		{
-	     
+	     	
 	    }
 
 

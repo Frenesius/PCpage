@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ComponentFoundCheck extends HandleUserInfo {
 	
+	private static final long serialVersionUID = 8032821266612928940L;
+	
 	private boolean GPU;
 	private boolean PSU;
 	private boolean Motherboard;
 	private boolean Processor;
 	private boolean Memory;
 	private boolean Harddisk;
-	
 	
 	public void getUserInput(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
@@ -25,12 +26,23 @@ public class ComponentFoundCheck extends HandleUserInfo {
 		String[] mb = request.getParameterValues("PcBuilder");
 		PrintWriter out = response.getWriter();
 		
-		for (int i=0; i <pclist.size();  i++);
-		 if(mb == null) {
-	    	  out.println("Motherboard is not selected");
-		 }
+		for (int i=0; i < pclist.size();  i++); {
+		
+			 if	(mb == null) {
+		    	  out.println("Motherboard is not selected");
+			 } else if (mb != null) {
+				 Motherboard = true;
+			 	}
+			 
+			 if	() {
+				 
+			 } else if () {
+				 
+			 }
+		}
 		 
-	     RequestDispatcher dispatcher =           
+		 
+	     RequestDispatcher dispatcher =
 	    		  request.getRequestDispatcher("Products.jsp");    
          dispatcher.forward( request, response );
 	}
